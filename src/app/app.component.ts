@@ -1,4 +1,4 @@
-import { Component, type OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,16 +6,14 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    console.log('Start of the project');
-  }
-
+export class AppComponent {
   title: string = '';
+  movies: any;
 
   getMovies(title: string) {
-    fetch(`/api/movies/?t=${title}`)
+    fetch(`/api/movies/?s=${title}`)
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) => (this.movies = json.data));
+    console.log(this.movies);
   }
 }
