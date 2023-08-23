@@ -9,15 +9,4 @@ import type { MovieSearchResult } from './interfaces/movie';
 })
 export class AppComponent {
   title: string = '';
-  movies: MovieSearchResult['Search'] = [];
-
-  getMovies(title: string) {
-    fetch(`/api/movies/?s=${title}`)
-      .then((response) => response.json())
-      .then((json) => (this.movies = json.data.Search));
-  }
-
-  openMovieDetails(movies: any) {
-    console.log(movies);
-  }
 }

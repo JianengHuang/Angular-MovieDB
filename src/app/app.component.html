@@ -1,16 +1,12 @@
 <h1>Busca la película que quieras</h1>
-<form (ngSubmit)="getMovies(title)">
+<form>
   <input
     type="text"
     name="title"
     [(ngModel)]="title"
     placeholder="Nombre de la película: "
   />
-  <button type="submit">Buscar</button>
+  <button type="submit" [routerLink]="['/search', title]">Buscar</button>
 </form>
 
-<div *ngIf="movies">
-  <div *ngFor="let movie of movies">
-    <h2 (click)="openMovieDetails(movie)">{{ movie.Title }}</h2>
-  </div>
-</div>
+<router-outlet></router-outlet>
