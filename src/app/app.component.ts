@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import type { MovieSearchResult } from './interfaces/movie';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title: string = '';
-  movies: any;
+  movies: MovieSearchResult['Search'] = [];
 
   getMovies(title: string) {
     fetch(`/api/movies/?s=${title}`)
       .then((response) => response.json())
-      .then((json) => (this.movies = json.data));
-    console.log(this.movies);
+      .then((json) => (this.movies = json.data.Search));
+  }
+
+  openMovieDetails(movies: any) {
+    console.log(movies);
   }
 }
