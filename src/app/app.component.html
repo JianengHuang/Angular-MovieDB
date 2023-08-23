@@ -1,20 +1,22 @@
-<div class="nav-container">
-  <form class="form-container">
-    <input
-      type="text"
-      name="title"
-      [(ngModel)]="title"
-      placeholder="Nombre de la película: "
-      class="search-box"
-    />
-    <button
-      type="submit"
-      [routerLink]="['/search', title]"
-      class="search-button"
-    >
-      Buscar
-    </button>
-  </form>
+<div class="biggest-container">
+  <div class="nav-container">
+    <form class="form-container">
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="title"
+        placeholder="Nombre de la película: "
+        class="search-box"
+      />
+      <button
+        type="submit"
+        [routerLink]="['/search', title]"
+        class="search-button"
+      >
+        Buscar
+      </button>
+    </form>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

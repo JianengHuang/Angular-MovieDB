@@ -2,12 +2,18 @@
   font-family: "PT Sans", sans-serif;
 }
 
+.biggest-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-container {
   background-color: #151515;
   color: white;
   position: relative;
   top: 0;
-  width: 100%;
+  width: 35%;
   overflow: hidden;
   left: 0;
   display: flex;
@@ -15,6 +21,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  border-radius: 15px;
 }
 
 .search-box {
