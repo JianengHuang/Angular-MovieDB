@@ -1,16 +1,22 @@
 <div>
   <h1>{{ movie.Title }}</h1>
-  <div>
-    <p>{{ movie.Released }}</p>
-    <p>Rated: {{ movie.Rated }}</p>
-    <p>Runtime: {{ movie.Runtime }}</p>
-  </div>
-  <img [src]="movie.Poster" alt="movie.Title" />
-  <p>Genero: {{ movie.Genre }}</p>
-  <p>{{ movie.Plot }}</p>
-  <p>Director: {{ movie.Director }}</p>
-  <p>Actores: {{ movie.Actors }}</p>
-  <p>Language: {{ movie.Language }}</p>
-  <p>Country: {{ movie.Country }}</p>
-  <p>Awards: {{ movie.Awards }}</p>
+    <div class="container">
+      <p>{{ movie.Released }}</p>
+      <p>Rated: {{ movie.Rated }}</p>
+      <p>Runtime: {{ movie.Runtime }}</p>
+    </div>
+    <img [src]="movie.Poster" alt="movie.Title" />
+    <p>Genero: {{ movie.Genre }}</p>
+    <hr />
+    <p>{{ movie.Plot }}</p>
+    <hr />
+    <p>Director: {{ movie.Director }}</p>
+    <hr />
+    <p>Actores: {{ movie.Actors }}</p>
+    <hr />
+    <p>Language: {{ movie.Language }}</p>
+    <hr />
+    <p>Country: {{ movie.Country }}</p>
+    <p>Awards: {{ movie.Awards }}</p>
 </div>
+<img src="{{ movie.Poster }}" alt="movie.Title" class="background-image" />

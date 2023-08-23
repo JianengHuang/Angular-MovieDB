@@ -1,15 +1,16 @@
-import { Component, type OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import type { MovieSearchResult } from '../interfaces/movie';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
   movies: MovieSearchResult['Search'] = [];
   id: string = '';
+  router: Router = new Router();
 
   constructor(private route: ActivatedRoute) {}
 

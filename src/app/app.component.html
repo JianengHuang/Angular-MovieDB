@@ -1,12 +1,20 @@
-<h1>Busca la película que quieras</h1>
-<form>
-  <input
-    type="text"
-    name="title"
-    [(ngModel)]="title"
-    placeholder="Nombre de la película: "
-  />
-  <button type="submit" [routerLink]="['/search', title]">Buscar</button>
-</form>
+<div class="nav-container">
+  <form class="form-container">
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="title"
+      placeholder="Nombre de la película: "
+      class="search-box"
+    />
+    <button
+      type="submit"
+      [routerLink]="['/search', title]"
+      class="search-button"
+    >
+      Buscar
+    </button>
+  </form>
+</div>
 
 <router-outlet></router-outlet>
