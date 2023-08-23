@@ -8,3 +8,9 @@
   />
   <button type="submit">Buscar</button>
 </form>
+
+<div *ngIf="movies">
+  <div *ngFor="let movie of movies">
+    <h2 (click)="openMovieDetails(movie)">{{ movie.Title }}</h2>
+  </div>
+</div>
