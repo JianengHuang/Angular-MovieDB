@@ -12,7 +12,7 @@ const handler: Handler = async (event) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ movies: json }),
+    body: JSON.stringify({ data: json }),
   };
 };
 
